@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="vm"
+            type="kr.co.releasetech.kiosk.view.activity.selectorder.SelectOrderViewModel" />
+
+        <variable
+            name="extra"
+            type="kr.co.releasetech.kiosk.model.realm.ScreenSetting" />
+    </data>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title_tv"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/notosans_bold"
+                android:gravity="center"
+                android:text="@string/select_order"
+                android:textColor="@color/default_textcolor"
+                android:textSize="40dp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_below="@id/title_tv"
+                android:layout_weight="2"
+                android:gravity="top|center_horizontal"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="500dp"
+                    android:layout_height="500dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/select_order_btn"
+                    android:fontFamily="@font/notosans_bold"
+                    android:gravity="center"
+                    android:onClick="@{ () -> vm.isTakeout(false)}"
+                    android:text="@string/in_store"
+                    android:textColor="@color/default_textcolor"
+                    android:textSize="@dimen/select_order_title_textsize" />
+
+
+                <TextView
+                    android:layout_width="500dp"
+                    android:layout_height="500dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="300dp"
+                    android:background="@drawable/select_order_btn"
+                    android:fontFamily="@font/notosans_bold"
+                    android:gravity="center"
+                    android:onClick="@{ () -> vm.isTakeout(true)}"
+                    android:text="@string/takeout"
+                    android:textColor="@color/default_textcolor"
+                    android:textSize="@dimen/select_order_title_textsize" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/manager_iv"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="@dimen/input_margin"
+            android:onClick="@{ () -> vm.stopLockTask() }"
+            android:src="@drawable/ic_baseline_settings_24"
+            android:visibility="@{ extra.useStandbyScreen? View.GONE: View.VISIBLE }" />
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/rl"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/item_main_category_size"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/category_btn"
+            android:paddingHorizontal="20dp">
+
+
+            <TextView
+                android:id="@+id/name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/notosans_medium"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+
+
+            <View
+                android:id="@+id/line_v"
+                android:layout_width="wrap_content"
+                android:layout_height="5dp"
+                android:layout_below="@id/name_tv"
+                android:layout_alignLeft="@id/name_tv"
+                android:layout_alignRight="@id/name_tv"
+                android:layout_marginTop="5dp"
+                android:background="@color/on_select_color"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </FrameLayout>
+</layout>

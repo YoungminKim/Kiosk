@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="kr.co.releasetech.kiosk.model.realm.OptionCategory" />
+
+        <variable
+            name="vm"
+            type="kr.co.releasetech.kiosk.view.activity.selectoption.SelectOptionViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{() -> vm.selectItem(item)}">
+
+        <TextView
+            android:id="@+id/name_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/input_margin"
+            android:fontFamily="@font/notosans_medium"
+            android:text="@{item.name}"
+            android:textColor="@color/black"
+            android:textSize="@dimen/title_textsize" />
+
+    </RelativeLayout>
+
+</layout>

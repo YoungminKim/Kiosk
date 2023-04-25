@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/drawable/add.xml" value="0.1525" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/drawable/blur.xml" value="0.2215" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/drawable/box_add.xml" value="0.203" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/drawable/box_category.xml" value="0.203" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/drawable/box_category_off.xml" value="0.203" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/drawable/box_category_on.xml" value="0.203" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/drawable/box_color.xml" value="0.203" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/drawable/box_goods.xml" value="0.256" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/drawable/box_list_item.xml" value="0.2215" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/drawable/box_manager_menu_action.xml" value="0.228" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/drawable/box_manager_menu_sales.xml" value="0.2215" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/drawable/box_manager_menu_setting.xml" value="0.229" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/drawable/box_quantity.xml" value="0.256" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/drawable/box_top_tab.xml" value="0.228" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/drawable/box_top_tab_off.xml" value="0.228" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/drawable/box_top_tab_on.xml" value="0.274" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/drawable/box_white_bot.xml" value="0.256" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/drawable/bozx_manager_menu_open.xml" value="0.229" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/drawable/btn_press_on.xml" value="0.274" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/drawable/button.xml" value="0.274" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/drawable/check_on.xml" value="0.2615" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/drawable/dialog_box.xml" value="0.21944444444444444" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/drawable/file_img.xml" value="0.257" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/drawable/frame_goods.xml" value="0.203" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/drawable/ic_baseline_check_box_outline_blank_24.xml" value="0.2615" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/drawable/ic_baseline_coffee_24.xml" value="0.17708333333333334" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/drawable/ic_baseline_image_24.xml" value="0.228" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/drawable/ic_baseline_settings_24.xml" value="0.22083333333333333" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/drawable/ic_twotone_cancel_24.xml" value="0.178125" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/drawable/instore.xml" value="0.203" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/drawable/manager_menu_05.xml" value="0.274" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/drawable/manager_menu_ic_03.xml" value="0.228" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/drawable/manager_menu_ic_05.xml" value="0.228" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/drawable/oval_white.xml" value="0.2095" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/drawable/radio_off.xml" value="0.2615" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/drawable/radio_on.xml" value="0.247" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/drawable/select_check.xml" value="0.2615" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/drawable/select_main_category.xml" value="0.203" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/drawable/select_radio.xml" value="0.247" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/drawable/select_top_tap.xml" value="0.274" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout-land/activity_edit_screen.xml" value="0.25" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout-land/activity_goods_detail.xml" value="0.18" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout-land/activity_main.xml" value="0.18" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout-land/activity_manager.xml" value="0.15" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout-land/activity_option.xml" value="0.10670916818457803" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout-land/activity_select_order.xml" value="0.1" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout-port/activity_edit_screen.xml" value="0.1" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout-port/activity_goods_detail.xml" value="0.1" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout-port/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout-port/activity_manager.xml" value="0.12630208333333334" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout-port/activity_option.xml" value="0.1" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout-port/activity_select_order.xml" value="0.1" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/activity_add_category.xml" value="0.103596757852077" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/activity_add_goods.xml" value="0.2046875" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/activity_add_option.xml" value="0.21458333333333332" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/activity_admin.xml" value="0.1490036231884058" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/activity_admin_login.xml" value="0.18" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/activity_admin_setting.xml" value="0.18" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/activity_color_picker.xml" value="0.1" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/activity_delete.xml" value="0.33" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/activity_delete_category.xml" value="0.15729166666666666" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/activity_edit_screen.xml" value="0.14" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/activity_goods_detail.xml" value="0.15" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/activity_hotice.xml" value="0.19895833333333332" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/activity_main.xml" value="0.18" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/activity_main_land.xml" value="0.22135416666666666" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/activity_manager.xml" value="0.12" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/activity_menu_setting.xml" value="0.22135416666666666" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/activity_option.xml" value="0.1" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/activity_order.xml" value="0.17" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/activity_order_detail.xml" value="0.12395833333333334" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/activity_payment.xml" value="0.17" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/activity_payment_detail.xml" value="0.18" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/activity_select_category.xml" value="0.22" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/activity_select_hotice.xml" value="0.1953125" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/activity_select_option.xml" value="0.10494791666666667" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/activity_select_order.xml" value="0.12395833333333334" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/activity_select_print.xml" value="0.15" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/activity_splash.xml" value="0.2046875" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/activity_standby.xml" value="0.13411458333333334" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/activity_wait.xml" value="0.15" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/dialog.xml" value="0.26145833333333335" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/dialog_add_category.xml" value="0.14166666666666666" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/dialog_category.xml" value="0.25" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/dialog_one_button.xml" value="0.21" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/dialog_two_button.xml" value="0.31666666666666665" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/fragment_category.xml" value="0.25" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/fragment_goods.xml" value="0.14673913043478262" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/fragment_option.xml" value="0.21458333333333332" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/fragment_order.xml" value="0.18" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/fragment_payment.xml" value="0.16875" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/include_item_goods_option.xml" value="0.1" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/include_item_goods_option_01.xml" value="0.25" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/include_item_goods_option_02.xml" value="0.1778052805280528" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/include_main_title.xml" value="0.1140625" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/include_option.xml" value="0.12239583333333333" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/include_title.xml" value="0.11067708333333333" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/item_add_goods.xml" value="0.2046875" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/item_add_goods_option.xml" value="0.11067708333333333" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/item_add_option.xml" value="0.10729166666666666" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/item_add_option_basic.xml" value="0.25" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/item_add_option_footer.xml" value="0.18307291666666667" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/item_add_stanby_file.xml" value="0.13411458333333334" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/item_cart.xml" value="0.1953125" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/item_category.xml" value="0.14" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/item_edit_screen_stanby_bg.xml" value="0.1" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/item_edit_screen_theme.xml" value="0.1" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/item_goods.xml" value="0.14" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/item_goods_detail.xml" value="0.1" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/item_goods_detail_basic.xml" value="0.1778052805280528" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/item_goods_detail_header.xml" value="0.11067708333333333" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/item_header_order.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/item_main_cart.xml" value="0.20260416666666667" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/item_main_category.xml" value="0.20260416666666667" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/item_main_goods.xml" value="0.12" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/item_option.xml" value="0.1" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/item_option_basic.xml" value="0.10364583333333334" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/item_order.xml" value="0.15833333333333333" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/item_order_basic.xml" value="0.16875" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/item_order_detail.xml" value="0.18" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/item_order_header.xml" value="0.20260416666666667" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/item_payment.xml" value="0.16875" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/item_select_category.xml" value="0.1" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/layout/item_select_option.xml" value="0.11067708333333333" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/menu/menu_main.xml" value="0.2046875" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.125" />
+        <entry key="..\:/Users/releasetech/workspace/Kiosk/app/src/main/res/xml/device_filter.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

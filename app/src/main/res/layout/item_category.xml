@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="kr.co.releasetech.kiosk.model.realm.Category" />
+
+        <variable
+            name="vm"
+            type="kr.co.releasetech.kiosk.view.fragment.category.CategoryViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginHorizontal="@dimen/activity_admin_horizontal_margin">
+
+        <TextView
+            android:id="@+id/index_tv"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/input_margin"
+            android:fontFamily="@font/notosans_medium"
+            android:gravity="right"
+            android:textColor="@color/grey_900"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/index_tv"
+            android:fontFamily="@font/notosans_medium"
+            android:text="@{item.name}"
+            android:textColor="@color/grey_900"
+            android:textSize="25sp" />
+
+        <ImageView
+            android:id="@+id/move_iv"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/input_margin"
+            android:src="@drawable/drag_handle" />
+
+        <Button
+            android:id="@+id/delete_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/btn_height"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/move_iv"
+            android:fontFamily="@font/notosans_medium"
+            android:gravity="center"
+            android:onClick="@{ () -> vm.removeCategory(item) }"
+            android:text="@string/delete"
+            android:textSize="@dimen/btn_textsize" />
+
+
+        <Button
+            android:id="@+id/modify_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/btn_height"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/input_margin"
+            android:layout_toLeftOf="@id/delete_bt"
+            android:fontFamily="@font/notosans_medium"
+            android:gravity="center"
+            android:onClick="@{ () -> vm.modifyCategory(item) }"
+            android:text="@string/modify"
+            android:textSize="@dimen/btn_textsize" />
+
+
+    </RelativeLayout>
+
+
+</layout>

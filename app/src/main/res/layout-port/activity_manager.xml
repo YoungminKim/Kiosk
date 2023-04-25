@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="vm"
+            type="kr.co.releasetech.kiosk.view.activity.manager.ManagerViewModel" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/top_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_admin_margin"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/notosans_bold"
+                    android:gravity="center"
+                    android:text="@string/app_name"
+                    android:textColor="@color/grey_300"
+                    android:textSize="@dimen/title_textsize" />
+
+
+                <TextView
+                    android:id="@+id/date_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/notosans_bold"
+                    android:gravity="center"
+                    android:textColor="@color/grey_300"
+                    android:textSize="@dimen/title_textsize" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/top_rl"
+                android:background="@color/grey_300" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/activity_manager_padding">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <kr.co.releasetech.kiosk.view.SquareRelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/activity_manager_item_size"
+                            android:layout_marginRight="@dimen/activity_manager_item_margin"
+                            android:layout_weight="1"
+                            android:background="@drawable/box_manager_menu_open"
+                            android:onClick="@{() -> vm.openStore()}"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/ic_iv01"
+                                android:layout_width="@dimen/activity_manager_ic_size"
+                                android:layout_height="@dimen/activity_manager_ic_size"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/manager_menu_ic_01" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/ic_iv01"
+                                android:layout_centerHorizontal="true"
+                                android:fontFamily="@font/notosans_bold"
+                                android:gravity="center"
+                                android:text="@string/manager_menu_01"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/btn_manager_item_textsize" />
+                        </kr.co.releasetech.kiosk.view.SquareRelativeLayout>
+
+
+                        <kr.co.releasetech.kiosk.view.SquareRelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/activity_manager_item_size"
+                            android:layout_marginRight="@dimen/activity_manager_item_margin"
+                            android:layout_weight="1"
+                            android:background="@drawable/box_manager_menu_setting"
+                            android:onClick="@{() -> vm.menuSetting()}"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/ic_iv02"
+                                android:layout_width="@dimen/activity_manager_ic_size"
+                                android:layout_height="@dimen/activity_manager_ic_size"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/manager_menu_ic_02" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/ic_iv02"
+                                android:layout_centerHorizontal="true"
+                                android:fontFamily="@font/notosans_bold"
+                                android:gravity="center"
+                                android:text="@string/manager_menu_02"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/btn_manager_item_textsize" />
+                        </kr.co.releasetech.kiosk.view.SquareRelativeLayout>
+
+                        <kr.co.releasetech.kiosk.view.SquareRelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/activity_manager_item_size"
+                            android:layout_marginRight="@dimen/activity_manager_item_margin"
+                            android:layout_weight="1"
+                            android:background="@drawable/box_manager_menu_setting"
+                            android:onClick="@{() -> vm.managerSetting()}"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/ic_iv03"
+                                android:layout_width="@dimen/activity_manager_ic_size"
+                                android:layout_height="@dimen/activity_manager_ic_size"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/manager_menu_ic_03" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/ic_iv03"
+                                android:layout_centerHorizontal="true"
+                                android:fontFamily="@font/notosans_bold"
+                                android:gravity="center"
+                                android:text="@string/manager_menu_03"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/btn_manager_item_textsize" />
+                        </kr.co.releasetech.kiosk.view.SquareRelativeLayout>
+
+                        <kr.co.releasetech.kiosk.view.SquareRelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/activity_manager_item_size"
+                            android:layout_weight="1"
+                            android:background="@drawable/box_manager_menu_setting"
+                            android:onClick="@{() -> vm.settingDownLoad()}"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/ic_iv04"
+                                android:layout_width="@dimen/activity_manager_ic_size"
+                                android:layout_height="@dimen/activity_manager_ic_size"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/manager_menu_ic_04" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/ic_iv04"
+                                android:layout_centerHorizontal="true"
+                                android:fontFamily="@font/notosans_bold"
+                                android:gravity="center"
+                                android:text="@string/manager_menu_04"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/btn_manager_item_textsize" />
+                        </kr.co.releasetech.kiosk.view.SquareRelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_manager_item_margin"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <kr.co.releasetech.kiosk.view.SquareRelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/activity_manager_item_margin"
+                            android:layout_weight="1"
+                            android:background="@drawable/box_manager_menu_setting"
+                            android:onClick="@{() -> vm.settingUpload()}">
+
+                            <ImageView
+                                android:id="@+id/ic_iv05"
+                                android:layout_width="@dimen/activity_manager_ic_size"
+                                android:layout_height="@dimen/activity_manager_ic_size"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/manager_menu_ic_05" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/ic_iv05"
+                                android:layout_centerHorizontal="true"
+                                android:fontFamily="@font/notosans_bold"
+                                android:gravity="center"
+                                android:text="@string/manager_menu_05"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/btn_manager_item_textsize" />
+                        </kr.co.releasetech.kiosk.view.SquareRelativeLayout>
+
+
+                        <kr.co.releasetech.kiosk.view.SquareRelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/activity_manager_item_size"
+                            android:layout_marginRight="@dimen/activity_manager_item_margin"
+                            android:layout_weight="1"
+                            android:background="@drawable/box_manager_menu_action"
+                            android:onClick="@{() -> vm.orderList()}"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/ic_iv06"
+                                android:layout_width="@dimen/activity_manager_ic_size"
+                                android:layout_height="@dimen/activity_manager_ic_size"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/manager_menu_ic_06" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/ic_iv06"
+                                android:layout_centerHorizontal="true"
+                                android:fontFamily="@font/notosans_bold"
+                                android:gravity="center"
+                                android:text="@string/manager_menu_06"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/btn_manager_item_textsize" />
+                        </kr.co.releasetech.kiosk.view.SquareRelativeLayout>
+
+                        <kr.co.releasetech.kiosk.view.SquareRelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/activity_manager_item_size"
+                            android:layout_marginRight="@dimen/activity_manager_item_margin"
+                            android:layout_weight="1"
+                            android:background="@drawable/box_manager_menu_action"
+                            android:onClick="@{() -> vm.paymentList()}"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/ic_iv07"
+                                android:layout_width="@dimen/activity_manager_ic_size"
+                                android:layout_height="@dimen/activity_manager_ic_size"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/manager_menu_ic_07" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/ic_iv07"
+                                android:layout_centerHorizontal="true"
+                                android:fontFamily="@font/notosans_bold"
+                                android:gravity="center"
+                                android:text="@string/manager_menu_07"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/btn_manager_item_textsize" />
+                        </kr.co.releasetech.kiosk.view.SquareRelativeLayout>
+
+                        <kr.co.releasetech.kiosk.view.SquareRelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/activity_manager_item_size"
+                            android:layout_weight="1"
+                            android:background="@drawable/box_manager_menu_action"
+                            android:onClick="@{() -> vm.editScreen()}"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/ic_iv08"
+                                android:layout_width="@dimen/activity_manager_ic_size"
+                                android:layout_height="@dimen/activity_manager_ic_size"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/manager_menu_ic_08" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/ic_iv08"
+                                android:layout_centerHorizontal="true"
+                                android:fontFamily="@font/notosans_bold"
+                                android:gravity="center"
+                                android:text="@string/manager_menu_08"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/btn_manager_item_textsize" />
+                        </kr.co.releasetech.kiosk.view.SquareRelativeLayout>
+
+
+                    </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_manager_item_margin"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <kr.co.releasetech.kiosk.view.SquareRelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/activity_manager_item_size"
+                        android:layout_weight="1"
+                        android:background="@drawable/box_manager_menu_action"
+                        android:onClick="@{() -> vm.appFinish()}"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/ic_iv09"
+                            android:layout_width="@dimen/activity_manager_ic_size"
+                            android:layout_height="@dimen/activity_manager_ic_size"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/manager_menu_ic_09" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/ic_iv09"
+                            android:layout_centerHorizontal="true"
+                            android:fontFamily="@font/notosans_bold"
+                            android:gravity="center"
+                            android:text="@string/manager_menu_09"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/btn_manager_item_textsize" />
+                    </kr.co.releasetech.kiosk.view.SquareRelativeLayout>
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginRight="@dimen/activity_manager_item_margin"/>
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginRight="@dimen/activity_manager_item_margin"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_manager_item_margin"
+                        android:background="@drawable/box_manager_menu_sales"
+                        android:orientation="vertical"
+                        android:padding="@dimen/dialog_padding">
+
+
+                        <TextView
+                            android:id="@+id/sales_summary_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/notosans_bold"
+                            android:gravity="center"
+                            android:text="@string/how_sales_summary"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/title_textsize" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginVertical="@dimen/activity_manager_item_margin"
+                            android:background="@color/white" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/notosans_medium"
+                                android:gravity="center"
+                                android:text="@string/total_sales"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/btn_manager_item_textsize" />
+
+
+                            <TextView
+                                android:id="@+id/total_sales_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:fontFamily="@font/notosans_medium"
+                                android:gravity="center"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/btn_manager_item_textsize" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/activity_manager_item_margin"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/notosans_medium"
+                                android:gravity="center"
+                                android:text="@string/total_order"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/btn_manager_item_textsize" />
+
+
+                            <TextView
+                                android:id="@+id/total_order_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:fontFamily="@font/notosans_medium"
+                                android:gravity="center"
+                                android:text="@={ vm.totalOrderCountField }"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/btn_manager_item_textsize" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/activity_manager_item_margin"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/notosans_medium"
+                                android:gravity="center"
+                                android:text="@string/total_refund_count"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/btn_manager_item_textsize" />
+
+
+                            <TextView
+                                android:id="@+id/total_refund_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:fontFamily="@font/notosans_medium"
+                                android:gravity="center"
+                                android:text="@={ vm.totalRefundCountField }"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/btn_manager_item_textsize" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/activity_manager_item_margin"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/notosans_medium"
+                                android:gravity="center"
+                                android:text="@string/total_refund"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/btn_manager_item_textsize" />
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:fontFamily="@font/notosans_medium"
+                                android:gravity="center"
+                                android:text="@={ vm.totalRefundField }"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/btn_manager_item_textsize" />
+
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/activity_manager_item_margin"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/notosans_medium"
+                                android:gravity="center"
+                                android:text="@string/tdiscount"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/btn_manager_item_textsize" />
+
+
+                            <TextView
+                                android:id="@+id/discount_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:fontFamily="@font/notosans_medium"
+                                android:gravity="center"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/btn_manager_item_textsize" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/progress_rl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:background="@android:drawable/screen_background_dark_transparent">
+
+            <LinearLayout
+                android:layout_width="500dp"
+                android:layout_height="200dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/box_dialog"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/dialog_padding">
+
+                <ProgressBar
+                    android:layout_width="100dp"
+                    android:layout_height="100dp" />
+
+
+                <TextView
+                    android:id="@+id/progress_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/input_margin"
+                    android:fontFamily="@font/notosans_medium"
+                    android:gravity="left"
+                    android:textColor="@color/grey_900"
+                    android:textSize="@dimen/default_textsize" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </FrameLayout>
+
+</layout>

@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="vm"
+            type="kr.co.releasetech.kiosk.view.activity.main.MainViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/parent_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingHorizontal="50dp">
+
+
+                <ImageView
+                    android:id="@+id/logo_iv"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/logo_frame" />
+
+                <LinearLayout
+                    android:id="@+id/cart_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:fontFamily="@font/notosans_medium"
+                            android:gravity="center"
+                            android:text="@string/product_name"
+                            android:textColor="@color/default_textcolor"
+                            android:textSize="@dimen/btn_textsize" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:fontFamily="@font/notosans_medium"
+                            android:gravity="center"
+                            android:text="@string/option"
+                            android:textColor="@color/default_textcolor"
+                            android:textSize="@dimen/btn_textsize" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:fontFamily="@font/notosans_medium"
+                            android:gravity="center"
+                            android:text="@string/quantity"
+                            android:textColor="@color/default_textcolor"
+                            android:textSize="@dimen/btn_textsize" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:fontFamily="@font/notosans_medium"
+                            android:gravity="center"
+                            android:text="@string/price"
+                            android:textColor="@color/default_textcolor"
+                            android:textSize="@dimen/btn_textsize" />
+
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/notosans_medium"
+                            android:gravity="center"
+                            android:text="@string/delete"
+                            android:textColor="@color/default_textcolor"
+                            android:textSize="@dimen/btn_textsize" />
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/default_textcolor" />
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/cart_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginVertical="20dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                <LinearLayout
+                    android:id="@+id/total_price_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:visibility="gone"
+                    android:layout_marginBottom="50dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/btn_height"
+                        android:fontFamily="@font/notosans_medium"
+                        android:gravity="center"
+                        android:text="@string/amount"
+                        android:textColor="@color/black"
+                        android:textSize="30sp" />
+
+
+                    <TextView
+                        android:id="@+id/price_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/btn_height"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:fontFamily="@font/notosans_bold"
+                        android:gravity="center"
+                        android:text="@{ vm.totalPriceField }"
+                        android:textColor="@color/black"
+                        android:textSize="40sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="50dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/delete_bt"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/white_btn"
+                        android:fontFamily="@font/notosans_medium"
+                        android:textColor="@color/default_textcolor"
+                        android:gravity="center"
+                        android:onClick="@{() -> vm.allRemoveCart()}"
+                        android:text="@string/all_delete"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:id="@+id/payment_bt"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/theme_btn_5"
+                        android:fontFamily="@font/notosans_medium"
+                        android:gravity="center"
+                        android:text="@string/payment"
+                        android:textColor="@color/white"
+                        android:textSize="30sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/goods_ll"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/include_main_title_height"
+                        android:gravity="center_vertical"
+                        android:paddingHorizontal="50dp">
+
+                        <ImageView
+                            android:id="@+id/home_iv"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/home" />
+
+                        <TextView
+                            android:id="@+id/home_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="30dp"
+                            android:layout_toRightOf="@id/home_iv"
+                            android:fontFamily="@font/notosans_medium"
+                            android:gravity="center"
+                            android:text="@string/first_time"
+                            android:textColor="@color/white"
+                            android:textSize="30sp" />
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="50dp"
+                    android:background="@color/line" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/cate_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="100dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="20dp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/item_main_category" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/goods_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="100dp"
+                    android:layout_marginVertical="20dp"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="4"
+                    tools:listitem="@layout/item_main_goods" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:drawable/screen_background_dark_transparent"
+            android:visibility="gone" />
+
+
+        <RelativeLayout
+            android:id="@+id/empty_rl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/empty_menu_setting"
+                android:textColor="@color/black"
+                android:textSize="@dimen/default_textsize" />
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>

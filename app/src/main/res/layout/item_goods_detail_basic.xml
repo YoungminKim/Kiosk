@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+
+        <variable
+            name="vm"
+            type="kr.co.releasetech.kiosk.view.activity.goodsdetail.GoodsDetailViewModel" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/name_tv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_goods_option_height"
+            android:textColor="@color/black"
+            android:paddingHorizontal="@dimen/activity_manager_padding"
+            android:gravity="center_vertical"
+            android:background="@color/grey_300"
+            android:fontFamily="@font/notosans_bold"
+            android:textSize="@dimen/btn_textsize"/>
+
+        <LinearLayout
+            android:id="@+id/option_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </LinearLayout>
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="kr.co.releasetech.kiosk.model.realm.OptionCategory" />
+
+        <variable
+            name="vm"
+            type="kr.co.releasetech.kiosk.view.activity.addgoods.AddGoodsViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey_300" />
+
+            <TextView
+                android:id="@+id/name_tv"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/notosans_regular"
+                android:maxLines="1"
+                android:gravity="center_vertical"
+                android:textColor="@color/black"
+                android:textSize="@dimen/default_textsize" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/empty_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey_300" />
+
+            <ImageView
+                android:id="@+id/add_iv"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:onClick="@{ () -> vm.showSelectOption() }"
+                android:src="@drawable/add" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</layout>

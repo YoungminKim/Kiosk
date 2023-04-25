@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.graphics.Color" />
+
+        <variable
+            name="vm"
+            type="kr.co.releasetech.kiosk.view.activity.editscreen.EditScreenViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/include_title_v"
+            layout="@layout/include_title" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/dialog_padding">
+
+
+                <!-- 대기화면 -->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/notosans_medium"
+                    android:text="@string/standby_screen"
+                    android:textColor="@color/grey_900"
+                    android:textSize="@dimen/title_textsize" />
+
+
+                <Switch
+                    android:id="@+id/use_standby_sw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="@={ vm.useStandbyField }"
+                    android:fontFamily="@font/notosans_medium"
+                    android:onCheckedChanged="@{(switch, checked) -> vm.isCheckedUseStandby(checked)}"
+                    android:text="@string/use_standby_screen"
+                    android:textColor="@color/grey_900"
+                    android:textSize="@dimen/input_textsize" />
+
+                <LinearLayout
+                    android:id="@+id/standby_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/input_margin"
+                        android:orientation="horizontal">
+
+
+                        <RelativeLayout
+                            android:id="@+id/standby_rl"
+                            android:layout_width="800dp"
+                            android:layout_height="450dp">
+
+
+                            <ImageView
+                                android:id="@+id/standby_iv"
+                                android:layout_width="800dp"
+                                android:layout_height="450dp"
+                                android:scaleType="fitXY" />
+
+                            <VideoView
+                                android:id="@+id/standby_vv"
+                                android:layout_width="800dp"
+                                android:layout_height="450dp" />
+
+
+                            <FrameLayout
+                                android:layout_width="120dp"
+                                android:layout_height="120dp"
+                                android:layout_centerInParent="true"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <ImageView
+                                    android:id="@+id/standby_order_iv"
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/blur" />
+
+
+                                <TextView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/oval_white"
+                                    android:fontFamily="@font/notosans_medium"
+                                    android:gravity="center"
+                                    android:text="@string/order"
+                                    android:textColor="@color/grey_700"
+                                    android:textSize="13sp" />
+
+
+                            </FrameLayout>
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_margin="@dimen/input_margin"
+                                android:src="@drawable/ic_baseline_settings_24"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/activity_admin_margin"
+                            android:background="@color/white"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/notosans_medium"
+                                android:gravity="left|center_vertical"
+                                android:paddingHorizontal="@dimen/input_margin"
+                                android:text="@string/select_bg"
+                                android:textColor="@color/grey_900"
+                                android:textSize="@dimen/input_textsize" />
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/standby_bg_rv"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+
+                                <TextView
+                                    android:id="@+id/standby_bg_empty_tv"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:background="@color/white"
+                                    android:fontFamily="@font/notosans_medium"
+                                    android:gravity="center"
+                                    android:onClick="@{ () -> vm.openGallery() }"
+                                    android:text="@string/standby_bg_empty"
+                                    android:textColor="@color/grey_900"
+                                    android:textSize="13sp" />
+                            </FrameLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_admin_margin"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/notosans_medium"
+                            android:gravity="center"
+                            android:text="@string/image_bg_standby_second"
+                            android:textColor="@color/grey_900"
+                            android:textSize="@dimen/input_textsize" />
+
+                        <EditText
+                            android:id="@+id/standby_second_et"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginHorizontal="@dimen/input_margin"
+                            android:fontFamily="@font/notosans_medium"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:maxLength="3"
+                            android:text="@={vm.standbyImageSecondField}"
+                            android:textColor="@color/grey_900"
+                            android:textSize="@dimen/input_textsize" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/notosans_medium"
+                            android:gravity="center"
+                            android:text="@string/second"
+                            android:textColor="@color/grey_900"
+                            android:textSize="@dimen/input_textsize" />
+
+                        <Button
+                            android:id="@+id/standby_second_saved_bt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/btn_height"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="@dimen/input_margin"
+                            android:layout_marginRight="@dimen/input_margin"
+                            android:fontFamily="@font/notosans_medium"
+                            android:gravity="center"
+                            android:onClick="@{() -> vm.setImageStandby()}"
+                            android:text="@string/saved"
+                            android:textSize="@dimen/btn_textsize" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!-- 대기화면 -->
+
+                <!-- 메인화면 -->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_admin_margin"
+                    android:fontFamily="@font/notosans_medium"
+                    android:text="@string/main_screen"
+                    android:textColor="@color/grey_900"
+                    android:textSize="@dimen/title_textsize" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_admin_margin"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/notosans_medium"
+                        android:gravity="center"
+                        android:text="@string/order_countdown_second"
+                        android:textColor="@color/grey_900"
+                        android:textSize="@dimen/input_textsize" />
+
+                    <EditText
+                        android:id="@+id/order_close_second_et"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="@dimen/input_margin"
+                        android:fontFamily="@font/notosans_medium"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        android:text="@={vm.orderScreenSecondField}"
+                        android:textColor="@color/grey_900"
+                        android:textSize="@dimen/input_textsize" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/notosans_medium"
+                        android:gravity="center"
+                        android:text="@string/second"
+                        android:textColor="@color/grey_900"
+                        android:textSize="@dimen/input_textsize" />
+
+                    <Button
+                        android:id="@+id/order_close_second_saved_bt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/btn_height"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="@dimen/input_margin"
+                        android:layout_marginRight="@dimen/input_margin"
+                        android:fontFamily="@font/notosans_medium"
+                        android:gravity="center"
+                        android:onClick="@{() -> vm.setOrderScreenWait()}"
+                        android:text="@string/saved"
+                        android:textSize="@dimen/btn_textsize" />
+                </LinearLayout>
+
+                <Switch
+                    android:id="@+id/use_select_order_sw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_admin_margin"
+                    android:layout_weight="1"
+                    android:checked="@={ vm.useSOrderField }"
+                    android:fontFamily="@font/notosans_medium"
+                    android:onCheckedChanged="@{(switch, checked) -> vm.isCheckedUseSelectOrder(checked)}"
+                    android:text="@string/use_select_order_screen"
+                    android:textColor="@color/grey_900"
+                    android:textSize="@dimen/input_textsize" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/activity_admin_margin"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/notosans_medium"
+                        android:gravity="center"
+                        android:text="@string/select_logo_image"
+                        android:textColor="@color/grey_900"
+                        android:textSize="@dimen/input_textsize" />
+
+
+                    <ImageView
+                        android:id="@+id/logo_iv"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:onClick="@{ ()-> vm.setLogo() }"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/file_img" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_admin_margin"
+                    android:visibility="gone"
+                    android:onClick="@{ () -> vm.selectBgColor() }"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/notosans_medium"
+                        android:gravity="center"
+                        android:text="@string/background_color"
+                        android:textColor="@color/grey_900"
+                        android:textSize="@dimen/input_textsize" />
+
+                    <FrameLayout
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="@dimen/input_margin"
+                        android:background="@drawable/box_color">
+
+                        <View
+                            android:id="@+id/bg_v"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@{Color.parseColor(vm.bgColorField)}" />
+                    </FrameLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_admin_margin"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/notosans_medium"
+                        android:gravity="center"
+                        android:text="@string/select_theme"
+                        android:textColor="@color/grey_900"
+                        android:textSize="@dimen/input_textsize" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/theme_rv"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

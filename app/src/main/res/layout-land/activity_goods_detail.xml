@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="goods"
+            type="kr.co.releasetech.kiosk.model.realm.Goods" />
+
+        <variable
+            name="vm"
+            type="kr.co.releasetech.kiosk.view.activity.goodsdetail.GoodsDetailViewModel" />
+    </data>
+
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/top_rl"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:paddingHorizontal="@dimen/activity_admin_padding">
+
+
+            <ImageView
+                android:id="@+id/back_iv"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_baseline_arrow_circle_left_24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/notosans_bold"
+                android:text="@string/menu_detail"
+                android:textColor="@color/white"
+                android:textSize="60sp" />
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/iv"
+                    android:layout_width="600dp"
+                    android:layout_height="600dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/box_goods"
+                    android:scaleType="fitXY"
+                    app:imgUrl="@{goods.imgUrl}" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_admin_margin"
+                    android:fontFamily="@font/notosans_bold"
+                    android:text="@{goods.name}"
+                    android:textColor="@color/black"
+                    android:textSize="60sp" />
+
+
+                <TextView
+                    android:id="@+id/description_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:fontFamily="@font/notosans_regular"
+                    android:gravity="center"
+                    android:text="@{goods.description}"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/btn_textsize" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_admin_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/notosans_medium"
+                        android:gravity="top"
+                        android:text="@string/quantity"
+                        android:textColor="@color/black"
+                        android:textSize="40sp" />
+
+                    <TextView
+                        android:id="@+id/minus_iv"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginLeft="30dp"
+                        android:background="@drawable/box_quantity"
+                        android:fontFamily="@font/notosans_bold"
+                        android:gravity="center"
+                        android:onClick="@{ () -> vm.setCount(false) }"
+                        android:text="-"
+                        android:textColor="@color/default_textcolor"
+                        android:textSize="45sp" />
+
+                    <TextView
+                        android:id="@+id/count_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="30dp"
+                        android:fontFamily="@font/notosans_medium"
+                        android:gravity="center"
+                        android:text="@{vm.quantityField}"
+                        android:textColor="@color/black"
+                        android:textSize="50sp" />
+
+
+                    <TextView
+                        android:id="@+id/plus_iv"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/box_quantity"
+                        android:fontFamily="@font/notosans_bold"
+                        android:gravity="center"
+                        android:onClick="@{ () -> vm.setCount(true) }"
+                        android:text="+"
+                        android:textColor="@color/default_textcolor"
+                        android:textSize="45sp" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/btn_height"
+                    android:fontFamily="@font/notosans_medium"
+                    android:gravity="center"
+                    android:text="@string/amount"
+                    android:textColor="@color/black"
+                    android:textSize="30sp" />
+
+
+                <TextView
+                    android:id="@+id/price_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/btn_height"
+                    android:fontFamily="@font/notosans_bold"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="30dp"
+                    android:gravity="center"
+                    android:text="@{ vm.totalPriceField }"
+                    android:textColor="@color/black"
+                    android:textSize="40sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/option_tv"
+                    android:layout_width="200dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/white_btn"
+                    android:fontFamily="@font/notosans_bold"
+                    android:gravity="center"
+                    android:onClick="@{ () -> vm.showOption() }"
+                    android:text="@string/option"
+                    android:visibility="gone"
+                    android:textColor="@color/default_textcolor"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/add_tv"
+                    android:layout_width="200dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="150dp"
+                    android:background="@drawable/theme_btn_5"
+                    android:fontFamily="@font/notosans_bold"
+                    android:gravity="center"
+                    android:onClick="@{ () -> vm.selectComplete() }"
+                    android:text="@string/select_complete"
+                    android:textColor="@color/white"
+                    android:textSize="30sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</layout>

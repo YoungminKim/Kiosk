@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="vm"
+            type="kr.co.releasetech.kiosk.view.activity.selectoption.SelectOptionViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:drawable/screen_background_dark_transparent">
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="@dimen/dialog_width"
+            android:layout_height="@dimen/dialog_list_height"
+            android:background="@drawable/box_dialog"
+            android:orientation="horizontal"
+            android:padding="@dimen/dialog_padding"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:context=".view.activity.selectcategory.SelectCategoryActivity">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_select_category" />
+
+
+
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/close_iv"
+            android:layout_width="@dimen/ic_size"
+            android:layout_height="@dimen/ic_size"
+            app:layout_constraintEnd_toEndOf="@id/ll"
+            app:layout_constraintTop_toTopOf="@id/ll"
+            android:onClick="@{() -> vm.close()}"
+            android:src="@drawable/ic_twotone_cancel_24" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="vm"
+            type="kr.co.releasetech.kiosk.view.activity.colorpicker.ColorPickerViewModel" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:drawable/screen_background_dark_transparent">
+
+        <LinearLayout
+            android:layout_width="@dimen/dialog_width"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/box_dialog"
+            android:orientation="vertical"
+            android:padding="@dimen/dialog_padding">
+
+            <com.skydoves.colorpickerview.ColorPickerView
+                android:id="@+id/colorPickerView"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/input_margin"
+                android:fontFamily="@font/notosans_medium"
+                android:text="@string/alpha_control"
+                android:textColor="@color/input_textcolor"
+                android:textSize="@dimen/input_textsize" />
+
+
+            <com.skydoves.colorpickerview.sliders.AlphaSlideBar
+                android:id="@+id/alphaSlideBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:borderColor_AlphaSlideBar="@android:color/darker_gray"
+                app:borderSize_AlphaSlideBar="5"
+                app:selector_AlphaSlideBar="@drawable/wheel" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/input_margin"
+                android:fontFamily="@font/notosans_medium"
+                android:text="@string/bright_control"
+                android:textColor="@color/input_textcolor"
+                android:textSize="@dimen/input_textsize" />
+
+
+            <com.skydoves.colorpickerview.sliders.BrightnessSlideBar
+                android:id="@+id/brightnessSlide"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:borderColor_BrightnessSlider="@android:color/darker_gray"
+                app:borderSize_BrightnessSlider="5"
+                app:selector_BrightnessSlider="@drawable/wheel" />
+
+
+            <EditText
+                android:id="@+id/color_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/input_margin"
+                android:gravity="center_horizontal"
+                android:fontFamily="@font/notosans_medium"
+                android:textColor="@color/input_textcolor"
+                android:text="@={ vm.colorField }"
+                android:textSize="@dimen/input_textsize" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btn_height"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/cancel_bt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="@dimen/input_margin"
+                    android:fontFamily="@font/notosans_medium"
+                    android:gravity="center"
+                    android:text="@string/cancel"
+                    android:onClick="@{ () -> vm.cancel()}"
+                    android:textSize="@dimen/btn_textsize" />
+
+
+                <Button
+                    android:id="@+id/confirm_bt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="@dimen/input_margin"
+                    android:fontFamily="@font/notosans_medium"
+                    android:gravity="center"
+                    android:text="@string/confirm"
+                    android:onClick="@{ () -> vm.confirm()}"
+                    android:textSize="@dimen/btn_textsize" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </FrameLayout>
+
+</layout>

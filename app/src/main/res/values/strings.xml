@@ -1,0 +1,182 @@
+<resources>
+    <string name="app_name">Kiosk</string>
+
+    <string name="pemission_denied">권한을 동의 해주세요</string>
+
+    <string name="network_error">데이터를 불러오는데 실패했습니다.\n잠시 후 이용해주시기 바랍니다.</string>
+
+    <string name="order">주문</string>
+    <string name="confirm">확인</string>
+    <string name="cancel">취소</string>
+
+    <string name="add">추가</string>
+    <string name="category_name">카테고리명</string>
+    <string name="plz_input_category_name">카테고리명을 입력해주세요.</string>
+    <string name="empty_category_list">카테고리가 없습니다.</string>
+
+    <string name="goods_name">상품명</string>
+    <string name="goods_img">이미지</string>
+    <string name="price">금액</string>
+    <string name="description">설명</string>
+    <string name="hot_price">HOT</string>
+    <string name="ice_price">ICE</string>
+    <string name="plz_input_goods_name">상품명을 입력해주세요.</string>
+    <string name="plz_input_hot_price">가격을 입력해주세요.</string>
+    <string name="plz_input_ice_price">가격을 입력해주세요.</string>
+    <string name="plz_input_goods_img">상품이미지를 넣어주세요.</string>
+
+    <string name="do_u_want_delete">해당 카테고리를 삭제 하시면\n관련 카테고리 상품들도 함께 삭제 됩니다.\n%s\n삭제하시겠습니까?</string>
+
+    <string name="modify">수정</string>
+    <string name="delete">삭제</string>
+
+    <string name="db_error_message">저장 실패 하였습니다.</string>
+
+    <string name="ice">ICE</string>
+    <string name="hot">HOT</string>
+
+    <string name="payment">결제하기</string>
+    <string name="all_delete">전체삭제</string>
+
+    <string name="not_kicc_app_installed">EasyCardA App이 설치 되지 않았습니다.</string>
+
+    <string name="empty_cart_item">장바구니가 비어있습니다</string>
+    <string name="order_number">주문번호</string>
+    <string name="date">날짜</string>
+    <string name="order_name">주문명</string>
+    <string name="payment_is_success">결제 여부</string>
+    <string name="payment_failed">결제 실패 이유</string>
+
+    <string name="option_category_name">옵션 카테고리 명</string>
+    <string name="single_choice">필수 선택</string>
+    <string name="multiple_choice">추가 메뉴</string>
+
+    <string name="empty_menu_setting">관리자 설정에서 메뉴를 설정하시길 바랍니다.</string>
+
+    <string name="manager_menu_01">개점</string>
+    <string name="manager_menu_02">메뉴 설정</string>
+    <string name="manager_menu_03">관리자 설정</string>
+    <string name="manager_menu_04">설정 다운로드</string>
+    <string name="manager_menu_05">설정 업로드</string>
+    <string name="manager_menu_06">주문 내역</string>
+    <string name="manager_menu_07">결제 내역</string>
+    <string name="manager_menu_08">환경 설정</string>
+    <string name="manager_menu_09">종료</string>
+
+    <string name="how_sales_summary">%s 매출 요약</string>
+
+    <string name="total_sales">총매출액</string>
+    <string name="total_order">총주문건수</string>
+    <string name="count">건</string>
+    <string name="tdiscount">할인금액</string>
+    <string name="how_amount">%d원</string>
+    <string name="currency">원</string>
+
+    <string name="input_admin_pass">관리자 비밀번호를 입력해주세요.</string>
+
+    <string name="can_not_large_endate">조회시작일이 조회종료일보다 큽니다.</string>
+
+    <string name="option_name">옵션명</string>
+    <string name="add_price">추가금액</string>
+    <string name="saved">저장</string>
+
+    <string name="now_pass">현재 비밀번호</string>
+    <string name="update_pass">변경 비밀번호</string>
+    
+    <string name="input_wrong_pass">비밀번호가 틀렸습니다.</string>
+    <string name="plz_input_pass">패스워드를 입력해주세요.</string>
+    <string name="update_pass_success">패스위드가 변경되었습니다.</string>
+    <string name="same_pass">이전 패스워드와 같습니다.</string>
+
+    <string name="add_option">옵션추가</string>
+    <string name="add_option_click">선택된 옵션이 없습니다.\n추가하고 싶으면\n클릭하세요.</string>
+
+    <string name="add_cart">장바구니 담기</string>
+    <string name="not_setting_file">키오스크 설정 파일이 아닙니다.</string>
+
+    <string name="setting_file_download_suceess">설정 파일 다운로드 완료 되었습니다.</string>
+    <string name="setting_file_upload_suceess">설정 파일 업로드 완료 되었습니다.\n키오스크를 재실행 하세요.</string>
+    <string name="warning_pre_data_delete">설정 업로드 할 경우 이전 데이터가 삭제 됩니다.\n진행하시겠습니까?</string>
+
+    <string name="compress_settting_file">설정 파일 압축 중 입니다.</string>
+    <string name="copy_settting_file">설정 파일 복사중 입니다.</string>
+    <string name="setting_data_reset">설정 데이터 초기화 중 입니다.</string>
+    <string name="setting_file_reset">설정 파일 초기화 중 입니다.</string>
+    <string name="decompression_setting_file">설정 파일 압축 해제 중 입니다.</string>
+    <string name="read_setting_file">설정 파일 읽는 중 입니다.</string>
+
+    <string name="standby_screen">대기화면</string>
+    <string name="select_bg">화면 배경 선택</string>
+    <string name="standby_bg_empty">선택된 배경이 없습니다.\n추가하고 싶으면\n클릭하세요.</string>
+    <string name="not_allow_file">허용되지 않는 파일입니다. 이미지나 동영상파일을 선택해 주세요.</string>
+    <string name="image_bg_standby_second">이미지 대기 시간</string>
+    <string name="second">초</string>
+    
+    <string name="bright_control">밝기 조절</string>
+    <string name="alpha_control">투명도 조절</string>
+
+    <string name="main_screen">메인화면</string>
+
+    <string name="in_store">매장에서</string>
+    <string name="takeout">포장</string>
+    <string name="store">매장</string>
+
+    <string name="use_standby_screen">대기화면 사용</string>
+    <string name="use_select_order_screen">주문 선택 화면 사용</string>
+
+    <string name="order_countdown_second">주문 화면 대기 시간</string>
+    <string name="refund">환불</string>
+    <string name="close">닫기</string>
+    <string name="approval">승인</string>
+    <string name="single_payment">일시불</string>
+
+
+    <string name="tran_no">요청 순번</string>
+    <string name="approval_num">거래 승인번호</string>
+    <string name="approval_date">거래 승인날짜</string>
+    <string name="tran_type">거래구분자</string>
+    <string name="card_name">카드사</string>
+    <string name="card_num">카드번호</string>
+    <string name="total_amount">총 결제 금액</string>
+    <string name="tax">부가세 금액</string>
+    <string name="installment">할부유무</string>
+    <string name="shop_name">가맹점 명</string>
+    <string name="shop_tel">가맹점 전화 번호</string>
+    <string name="shop_address">가맹점 주소</string>
+    <string name="shop_owner">가맹점주명</string>
+
+    <string name="how_month">%s개월</string>
+    <string name="amount">결제 금액</string>
+    <string name="refund_success">환불 되었습니다.</string>
+
+    <string name="total_refund_count">총 환불 건수</string>
+    <string name="total_refund">총 환불액</string>
+
+    <string name="order_type">주문방식</string>
+    <string name="quantity">수량</string>
+    <string name="option">옵션</string>
+    <string name="payment_success">결제 성공</string>
+    <string name="payment_fail">결제 실패</string>
+    <string name="background_color">배경 색상</string>
+    <string name="select_theme">테마 선택</string>
+    
+    <string name="not_color_hex_code">칼라값이 아닙니다.</string>
+    <string name="not_found_printer">프린터 연결을 확인해주세요.</string>
+    <string name="permision_denied_printer">프린터 연결 권한이 거부되었습니다.</string>
+    <string name="printer_connect_failed">프린터 연결에 실패했습니다.</string>
+    <string name="printer_connect_close">프린터 연결을 닫았습니다.</string>
+    <string name="first_time">처음으로</string>
+
+    <string name="select_option">옵션 선택</string>6
+    <string name="select_order">주문 방법을 선택해주세요</string>
+
+    <string name="select_logo_image">로고 이미지 선택</string>
+
+    <string name="menu_detail">상세 메뉴</string>
+    <string name="select_complete">선택완료</string>
+
+    <string name="product_name">품명</string>
+    <string name="u_want_receipt_print">주문이 완료되었습니다.\n영수증을 출력하시겠습니까?</string>
+    <string name="receipt">영수증</string>
+    <string name="waiting_number">대기 번호</string>
+</resources>
