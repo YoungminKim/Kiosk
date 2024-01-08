@@ -19,6 +19,7 @@ class AddCategoryActivity: BaseActivity<ActivityAddCategoryBinding>(R.layout.act
         binding.vm = viewModel
         binding.lifecycleOwner = this
 
+
         val category = intent?.getParcelableExtra<Category>("item")
         val index = intent?.getIntExtra("index", 0)!!
         category?.let{
